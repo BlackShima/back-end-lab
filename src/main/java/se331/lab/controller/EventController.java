@@ -1,5 +1,8 @@
 package se331.lab.controller;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import se331.lab.entity.Event;
 
@@ -80,5 +83,18 @@ public class EventController {
                 .petsAllowed(false)
                 .organizer("Brody Kill")
                 .build());
+    }
+    @GetMapping("/events")
+    public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false)Integer perPage,
+                                           @RequestParam(value = "_page", required = false)Integer page) {
+        perPage = perPage == null?eventList.size():perPage;
+        page = page == null?1:page;
+        Integer firstIndex = (page-1)*perPage;
+        List<Event> output = new ArrayList<>();
+        for (int i = firstIndex; i < firstIndex + perPage; i++) {
+           output.add(eventList.get(i));
+
+        }
+        return ResponseEntity.ok(eventList);
     }
 }
