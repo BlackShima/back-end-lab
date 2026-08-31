@@ -15,7 +15,7 @@ public class EventDaoImpl implements EventDao {
     public void init() {
         eventList = new ArrayList<>();
         eventList.add(Event.builder()
-                .id(123L)
+                .id(1L)
                 .category("animal welfare")
                 .title("Cat Adoption Day")
                 .description("Find your new feline friend at this event.")
@@ -26,7 +26,7 @@ public class EventDaoImpl implements EventDao {
                 .organizer("Kat Laydee")
                 .build());
         eventList.add(Event.builder()
-                .id(456L)
+                .id(2L)
                 .category("food")
                 .title("Community Gardening")
                 .description("Join us as we tend to the community edible plants.")
@@ -37,7 +37,7 @@ public class EventDaoImpl implements EventDao {
                 .organizer("Fern Pollin")
                 .build());
         eventList.add(Event.builder()
-                .id(789L)
+                .id(3L)
                 .category("sustainability")
                 .title("Beach Cleanup")
                 .description("Help pick up trash along the shore.")
@@ -48,7 +48,7 @@ public class EventDaoImpl implements EventDao {
                 .organizer("Carey Wales")
                 .build());
         eventList.add(Event.builder()
-                .id(456L)
+                .id(4L)
                 .category("food")
                 .title("Community Gardening")
                 .description("Join us as we tend to the community edible plants.")
@@ -59,7 +59,7 @@ public class EventDaoImpl implements EventDao {
                 .organizer("Fern Pollin")
                 .build());
         eventList.add(Event.builder()
-                .id(987L)
+                .id(5L)
                 .category("Mum Ma Mia")
                 .title("It's me")
                 .description("Mario!")
@@ -70,7 +70,7 @@ public class EventDaoImpl implements EventDao {
                 .organizer("Mario Mama")
                 .build());
         eventList.add(Event.builder()
-                .id(654L)
+                .id(6L)
                 .category("sustainability")
                 .title("Higway Cleanup")
                 .description("Help pick up trash along the highway.")
