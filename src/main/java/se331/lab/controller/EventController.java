@@ -95,6 +95,6 @@ public class EventController {
            output.add(eventList.get(i));
 
         }
-        return ResponseEntity.ok(eventList);
+        return ResponseEntity.ok(output);
     }
 }
