@@ -19,6 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EventController {
     final EventService eventService;
+
     @GetMapping("/events")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false)Integer perPage,
                                            @RequestParam(value = "_page", required = false)Integer page) {
@@ -31,6 +32,7 @@ public class EventController {
             return ResponseEntity.ok().headers(responseHeader).body(pageOutput.getContent());
         }
     }
+
     @GetMapping("events/{id}")
     public ResponseEntity<?> getEvent(@PathVariable("id") Long id) {
         Event output = eventService.getEvent(id);
