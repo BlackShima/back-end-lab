@@ -1,11 +1,12 @@
 package se331.lab.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
 import se331.lab.entity.Event;
 
 import java.util.List;
 
-public interface EventRepository extends CrudRepository<Event, Long> {
+public interface EventRepository extends JpaRepository<Event, Long> {
     List<Event> findAll();
 }
